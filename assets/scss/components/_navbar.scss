@@ -1,0 +1,18 @@
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    
+    &__brand {
+        background-color: $smoky-black;
+        color: $white;
+    }
+
+    &__dropdown {
+        display: none;
+    }
+}

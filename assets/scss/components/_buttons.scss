@@ -1,0 +1,19 @@
+/* Buttons */
+
+.button {
+    padding: .5em 2em;
+    color: $smoky-black;
+    border: 1px solid $smoky-black;
+    background-color: $white;
+    font-weight: $bold;
+
+    &:hover {
+        border-color: $quick-silver;
+    }
+    
+    &:focus {
+        border-color: $quick-silver;
+        color: $quick-silver;
+    }
+}
+

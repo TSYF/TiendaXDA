@@ -1,0 +1,10 @@
+/* Inputs */
+
+.input-text {
+    border-color: $quick-silver;
+    border-style: solid;
+    padding: .2em;
+    &::placeholder {
+        color: $smoky-black;
+    }
+}
