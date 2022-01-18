@@ -1,18 +1,111 @@
-/* Navigation */
-
+/* Header Layout
+ ========================================================================== */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    
+    height: 7vh;
+    position: relative;
+    border: 1px solid $smoky-black;
+
     &__brand {
+        height: 100%;
+        width: 7vh;
         background-color: $smoky-black;
         color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > span {
+            padding-top: 3px;
+            transition-duration: 0.3s;
+        }
     }
 
-    &__dropdown {
-        display: none;
+    .collapsible {
+        text-align: right;
+
+        label {
+            display: block;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-right: 1.5em;
+            font-size: 1.8rem;
+        }
+
+        input#menu {
+            display: none;
+        }
+    }
+
+    input:checked ~ &__container {
+        min-height: 100%;
+        position: absolute;
+        overflow: visible;
+    }
+
+    &__container {
+        width: 80%;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        transition-duration: 0.5s;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        a {
+            display: block;
+            text-align: right;
+            padding: 0.5em;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            &:hover {
+                color: $quick-silver;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+    .navbar {
+        &__brand {
+            top: 1em;
+            left: 3em;
+
+            > span {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .collapsible {
+            label {
+                display: none;
+            }
+        }
+
+        &__container {
+            min-height: 100%;
+            padding: 0.5em 3em 0.5em 0;
+            overflow: visible;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: end;
+            margin: inherit;
+            padding: inherit;
+        }
+
+        &__item {
+            a {
+                padding: 0.5em 1em;
+                font-size: 1rem;
+                font-weight: $regular;
+            }
+        }
     }
 }

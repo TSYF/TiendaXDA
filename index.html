@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Google Fonts: Old Standard TT (400, 700), Raleway (400, 700) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Font Awesome v5 kit -->
+    <script src="https://kit.fontawesome.com/c285f9db4f.js" crossorigin="anonymous"></script>
+
     <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    
+
     <title>Tienda XDA</title>
 </head>
+
 <body>
-     <header>
-         <nav>
-             
-         </nav>
-     </header>
+    <header class="header">
+        <nav class="navbar row">
+            <div class="navbar__brand">
+                <span>XDA</span>
+            </div>
+            <div class="collapsible col-11">
+                <input type="checkbox" name="menu" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <div class="navbar__container">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a href="#">Mujer</a></li>
+                        <li class="navbar__item"><a href="#">Hombre</a></li>
+                        <li class="navbar__item"><a href="#">Accesorios</a></li>
+                        <li class="navbar__item"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 </body>
+
 </html>

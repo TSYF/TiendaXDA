@@ -1,8 +1,9 @@
 // Abstracts
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
-@import 'abstracts/breakpoints';
+@import 'abstracts/maps';
 // Vendors
+@import 'vendors/normalize.scss';
 // Base
 @import 'base/typography';
 @import 'base/reset';

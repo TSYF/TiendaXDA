@@ -11,10 +11,21 @@
             }
         }
         @each $breakpoint, $value in $breakpoints {
+
             @for $i from 1 through 12 {
                 .col-#{$breakpoint}-#{$i} {
-                    grid-column: span $i;
+                    grid-column: span 1fr;
                 }
+            }
+            
+            @media (min-width: $breakpoint) {
+                
+                @for $i from 1 through 12 {
+                    .col-#{$breakpoint}-#{$i} {
+                        grid-column: span $i;
+                    }
+                }
+
             }
         }
     }
