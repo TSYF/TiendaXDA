@@ -1,0 +1,120 @@
+/* Main
+================================================================= */
+
+.main {
+    $this: &;
+
+    height: 93vh;
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+
+    @media (min-width: map-get($breakpoints, lg)) {
+        grid-template-rows: 100%;
+    }
+
+    /* Main Content
+    ================================================================= */
+    & > &-content {
+        height: 100%;
+    }
+
+    /* Main Image
+    ================================================================= */
+    &-img {
+        background-image: url("../img/imagen1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+
+        height: 30rem;
+        width: auto;
+
+        @media (min-width: map-get($breakpoints, lg)) {
+            #{$this} > & {
+                height: 100%;
+                grid-column: 6 / span 7;
+            }
+        }
+    }
+}
+/* Main Text
+     ================================================================= */
+
+.text {
+    padding: 3em;
+    height: 80%;
+
+    &__container {
+        width: 75%;
+    }
+
+    &__title {
+        font-family: $old-standard;
+        font-size: $xx-large;
+        margin-bottom: 1rem;
+        @media (min-width: map-get($breakpoints, lg)) {
+            font-size: $xxx-large;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 1rem;
+        font-size: $medium;
+    }
+
+    &__button {
+        font-size: $large;
+    }
+}
+
+/* Form
+        ================================================================= */
+
+.form {
+    height: 25%;
+
+    * {
+        font-family: $old-standard;
+    }
+
+    &__content {
+        background-color: $smoky-black;
+        color: $white;
+        padding: 1rem;
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: $x-large;
+        margin-bottom: 0.3rem;
+    }
+
+    &__label {
+        font-size: $regular;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0.5em 1em;
+
+        &::placeholder {
+            font-family: $raleway;
+        }
+    }
+
+    &__button {
+        @include center;
+        border: none !important;
+
+        & > span {
+            position: absolute;
+            transform: rotate(90deg);
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, lg)) {
+    }
+}
